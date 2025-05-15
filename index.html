@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Salon Monda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: url('https://static.wixstatic.com/media/97c715_ded440a7d16a41f5b5c5ed26c69b8cd6~mv2.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .location, .socials, .services, .contact {
+      text-align: center;
+      margin: 20px 0;
+    }
+    a {
+      color: #ffb6c1;
+      text-decoration: none;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #e754a5;
+    }
+    .service-description {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Beauty Salon Monda</h1>
+    <div class="location">
+      📍 <a href="https://maps.app.goo.gl/UdTrWSqa3dfQ3sTt9?g_st=ac" target="_blank">Korçë, City Center (kati 2)</a>
+    </div>
+
+    <div class="services">
+      <h2>Shërbimet</h2>
+      <button class="button" onclick="toggleInfo('makeup')">Make-up</button>
+      <div id="makeup" class="service-description">Grim profesional për çdo rast: dasma, mbrëmje, ditëlindje dhe evente të veçanta.</div>
+
+      <button class="button" onclick="toggleInfo('hairstyle')">Hairstyle</button>
+      <div id="hairstyle" class="service-description">Modelime moderne dhe klasike për çdo stil dhe formë fytyre.</div>
+
+      <button class="button" onclick="toggleInfo('microblading')">Microblading</button>
+      <div id="microblading" class="service-description">Formësim natyral i vetullave me teknikë të avancuar microblading.</div>
+
+      <button class="button" onclick="toggleInfo('extension')">Hair Extension</button>
+      <div id="extension" class="service-description">Zgjatje flokësh cilësore për më shumë volum dhe gjatesi natyrale.</div>
+    </div>
+
+    <div class="contact">
+      <a href="https://wa.me/355694332206" target="_blank" class="button">📲 Rezervo në WhatsApp</a>
+      <a href="tel:+355694332206" class="button">📞 Telefono</a>
+    </div>
+
+    <div class="socials">
+      <p>Mund të na gjeni në Instagram dhe TikTok:</p>
+      <p>
+        📸 <a href="https://www.instagram.com/salon_monda?igsh=MWw3YjhqeW82bjY4Zg==" target="_blank">Instagram</a><br />
+        🎥 <a href="https://www.tiktok.com/@salon.monda?_t=ZS-8wNtzMhABQf&_r=1" target="_blank">TikTok</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
